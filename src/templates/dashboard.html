@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SaúdeViva PoC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard SaúdeViva</h1>
+        <p>Bem-vindo, {{ username }}! <a href="/logout">Sair</a></p>
+
+        <h2>Registrar Nível de Glicose</h2>
+        <form id="glucose-form" method="post" action="/add_glucose">
+            <label for="glucose_level">Nível de Glicose (mg/dL):</label>
+            <input type="number" id="glucose_level" name="glucose_level" required><br><br>
+            <label for="timestamp">Data e Hora:</label>
+            <input type="datetime-local" id="timestamp" name="timestamp" required><br><br>
+            <button type="submit">Registrar</button>
+        </form>
+
+        <h2>Histórico de Glicose</h2>
+        <div id="glucose-history">
+            <!-- Histórico será carregado aqui via JS ou renderizado pelo Flask -->
+            {% if glucose_readings %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data e Hora</th>
+                        <th>Nível (mg/dL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reading in glucose_readings %}
+                    <tr>
+                        <td>{{ reading.timestamp.strftime('%d/%m/%Y %H:%M') }}</td>
+                        <td>{{ reading.level }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>Nenhum registro encontrado.</p>
+            {% endif %}
+        </div>
+
+        <h2>Dicas de Saúde Personalizadas</h2>
+        <div id="health-tips">
+            <!-- Dicas serão carregadas aqui -->
+            <p>{{ health_tip }}</p>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </div>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+</body>
+</html>
