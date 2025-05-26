@@ -1,4 +1,5 @@
-# SaúdeViva - Prova de Conceito (PI - Segunda Etapa)
+# PROJETO INTEGRADOR: DESENVOLVIMENTO DE SISTEMAS ORIENTADO A
+DISPOSITIVOS MÓVEIS E BASEADOS NA WEB
 
 Esta é uma prova de conceito (PoC) do aplicativo SaúdeViva, desenvolvida como parte da segunda etapa do Projeto Integrador do curso de Tecnologia em Análise e Desenvolvimento de Sistemas / Sistemas para Internet.
 
@@ -46,7 +47,6 @@ A jornada de João Carlos (45 anos, pré-diabético) foi escolhida para a Prova 
         ```bash
         pip install Flask
         ```
-        *(Se estiver fora do ambiente Manus, pode ser necessário instalar `sqlite3` separadamente, embora geralmente venha com Python)*
 
 3.  **Execução:**
     *   Navegue até o diretório `src` dentro do projeto:
