@@ -1,5 +1,4 @@
-# PROJETO INTEGRADOR: DESENVOLVIMENTO DE SISTEMAS ORIENTADO A
-DISPOSITIVOS MÓVEIS E BASEADOS NA WEB
+# PROJETO INTEGRADOR: DESENVOLVIMENTO DE SISTEMAS ORIENTADO A DISPOSITIVOS MÓVEIS E BASEADOS NA WEB
 
 Esta é uma prova de conceito (PoC) do aplicativo SaúdeViva, desenvolvida como parte da segunda etapa do Projeto Integrador do curso de Tecnologia em Análise e Desenvolvimento de Sistemas / Sistemas para Internet.
 
