@@ -35,14 +35,14 @@ A jornada de João Carlos (45 anos, pré-diabético) foi escolhida para a Prova 
     *   Ambiente virtual (recomendado).
 
 2.  **Instalação de Dependências:**
-    *   Navegue até o diretório raiz do projeto (`/home/ubuntu/saudeviva_poc` neste ambiente, ou onde você descompactar o projeto).
+    *   Navegue até o diretório raiz do projeto.
     *   (Opcional, mas recomendado) Crie e ative um ambiente virtual:
         ```bash
         python3 -m venv venv
         source venv/bin/activate  # Linux/macOS
         # venv\Scripts\activate    # Windows
         ```
-    *   Instale a única dependência externa (Flask já está pré-instalado no ambiente Manus):
+    *   Instale a única dependência externa:
         ```bash
         pip install Flask
         ```
